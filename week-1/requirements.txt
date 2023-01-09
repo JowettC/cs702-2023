@@ -1,0 +1,5 @@
+jupyter
+matplotlib
+numpy
+pygame==2.1.2
+pyomo
