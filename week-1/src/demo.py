@@ -46,7 +46,7 @@ def main():
                 goal_time, goal_pos = goal_list.pop(0)
                 pos = obj_pos / screen_x
                 m = mpc(pos, goal_pos)
-                pyo.SolverFactory('cbc').solve(m)
+                pyo.SolverFactory('glpk').solve(m)
                 K = np.array([k for k in m.k])
                 obj_pos_planned += [m.y[k]() for k in K]
 
